@@ -1,0 +1,51 @@
+<?php 
+$_settings = file_get_contents(__DIR__.'/app/Config/settings.json');
+$settings = json_decode($_settings, true);
+$path_plugin_local = '../../../../is2b/www/app/Plugin/';
+$path_themed_local = '../../../../is2b/www/app/Themed/';
+
+if(! empty($settings['Hook']['bootstraps'])){
+    $plugins = explode(',',$settings['Hook']['bootstraps']);
+    $themes = [];
+    $project = 'IS2B';
+    if(! empty($settings['Site']['theme'])){
+        $themes[] = $settings['Site']['theme'];
+    }
+    if(! empty($settings['Site']['admin_theme'])){
+        $themes[] = $settings['Site']['admin_theme'];
+    }
+    $json = [
+                "name" => $project,
+                "description" => " IS2B",
+                "version" => "1.0.0",
+                "keywords" => ["cakephp", strtolower($dir)],
+                "require" => ["php" => ">=5.4.0"],
+                "repositories" => [],
+                "require-dev" => []
+            ]; 
+    foreach($plugins as $plugin){
+        $json["repositories"][] = [
+            "type" => "path",
+            "url" => $path_plugin_local.$plugin,
+            "options" => [
+                "symlink" => false
+            ]
+        ];
+        $json["require-dev"][$plugin] = "*";
+    }
+    /*foreach($themes as $theme){
+        $json["repositories"][] = [
+            "type" => "path",
+            "url" => $path_themed_local.$theme,
+            "options" => [
+                "symlink" => false
+            ]
+        ];
+        $json["require-dev"][$theme] = "*";
+    }*/
+    print_r($json);
+    $composer = json_encode($json,JSON_PRETTY_PRINT);
+    file_put_contents(__DIR__.'/composer.json',$composer);
+}
+
+?>

@@ -1,0 +1,383 @@
+{
+    "name": "IS2B",
+    "description": " IS2B",
+    "version": "1.0.0",
+    "keywords": [
+        "cakephp",
+        ""
+    ],
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/Currency",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/ClearCache",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/Entities",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/Dictionaries",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/ComplexCategories",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/Settings",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/Comments",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/Contacts",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/Nodes",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/Meta",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/Menus",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/Users",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/Blocks",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/Taxonomy",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/FileManager",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/Wysiwyg",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/Ckeditor",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/Agency",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/ObjectTemplates",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/Fastadmin",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/ComplexCategories",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/DatetimePicker",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/ActivityStatistics",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/Reports",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/MarketAnalysis",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/Histories",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/FullCalendar",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/News",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/YandexMaps",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/Locations",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/Collations",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/Tasks",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/ModelComments",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/UserCalls",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/ScopeProfile",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/Contractors",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/Events",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/ExtraData",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/Source",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/DefaultProject",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/Documents",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/Deals",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/Services",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/Dompdf",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/Companies",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../../is2b/www/app/Plugin/CeniyMetr",
+            "options": {
+                "symlink": false
+            }
+        }
+    ],
+    "require-dev": {
+        "Currency": "*",
+        "ClearCache": "*",
+        "Entities": "*",
+        "Dictionaries": "*",
+        "ComplexCategories": "*",
+        "Settings": "*",
+        "Comments": "*",
+        "Contacts": "*",
+        "Nodes": "*",
+        "Meta": "*",
+        "Menus": "*",
+        "Users": "*",
+        "Blocks": "*",
+        "Taxonomy": "*",
+        "FileManager": "*",
+        "Wysiwyg": "*",
+        "Ckeditor": "*",
+        "Agency": "*",
+        "ObjectTemplates": "*",
+        "Fastadmin": "*",
+        "DatetimePicker": "*",
+        "ActivityStatistics": "*",
+        "Reports": "*",
+        "MarketAnalysis": "*",
+        "Histories": "*",
+        "FullCalendar": "*",
+        "News": "*",
+        "YandexMaps": "*",
+        "Locations": "*",
+        "Collations": "*",
+        "Tasks": "*",
+        "ModelComments": "*",
+        "UserCalls": "*",
+        "ScopeProfile": "*",
+        "Contractors": "*",
+        "Events": "*",
+        "ExtraData": "*",
+        "Source": "*",
+        "DefaultProject": "*",
+        "Documents": "*",
+        "Deals": "*",
+        "Services": "*",
+        "Dompdf": "*",
+        "Companies": "*",
+        "CeniyMetr": "*"
+    }
+}
