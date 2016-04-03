@@ -1,8 +1,29 @@
 <?php 
 $_settings = file_get_contents(__DIR__.'/app/Config/settings.json');
 $settings = json_decode($_settings, true);
-$path_plugin_local = '../../../../is2b/www/app/Plugin/';
-$path_themed_local = '../../../../is2b/www/app/Themed/';
+$path_plugin_local = '../is2b/www/app/Plugin/';
+$path_plugin_projects_local = '../is2b/www/plugins/';
+$path_themed_local = '../is2b/www/app/Themed/';
+//исключим плагины Croogo
+$exclude_plugins = [
+    'Settings',
+    'Acl',
+    'Blocks',
+    'Comments',
+    'Contacts',
+    'Menus',
+    'Meta',
+    'Nodes',
+    'Taxonomy',
+    'Wysiwyg',
+    'Ckeditor',
+    //'Users',
+    
+    'ClearCache'
+];
+$project = 'CeniyMetr'; //Проектный плагин
+$projects = ['DefaultProject'];
+$projects[] = $project;   
 
 if(! empty($settings['Hook']['bootstraps'])){
     $plugins = explode(',',$settings['Hook']['bootstraps']);
@@ -22,16 +43,27 @@ if(! empty($settings['Hook']['bootstraps'])){
                 "require" => ["php" => ">=5.4.0"],
                 "repositories" => [],
                 "require-dev" => []
-            ]; 
-    foreach($plugins as $plugin){
-        $json["repositories"][] = [
+            ];
+    $json["repositories"][] = [
             "type" => "path",
-            "url" => $path_plugin_local.$plugin,
+            "url" => $path_plugin_projects_local.'*/',
             "options" => [
                 "symlink" => false
             ]
         ];
-        $json["require-dev"][$plugin] = "*";
+    $json["repositories"][] = [
+            "type" => "path",
+            "url" => $path_plugin_local.'*/',
+            "options" => [
+                "symlink" => false
+            ]
+        ]; 
+    foreach($plugins as $plugin){
+        if(! in_array($plugin, $exclude_plugins)){
+            $alias = in_array($plugin,$projects) ? 'is2b-projects' : 'is2b';
+            $json["require-dev"][$alias.'/'.$plugin] = "*";    
+        }
+        
     }
     /*foreach($themes as $theme){
         $json["repositories"][] = [
@@ -44,7 +76,7 @@ if(! empty($settings['Hook']['bootstraps'])){
         $json["require-dev"][$theme] = "*";
     }*/
     print_r($json);
-    $composer = json_encode($json,JSON_PRETTY_PRINT);
+    $composer = json_encode($json,JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
     file_put_contents(__DIR__.'/composer.json',$composer);
 }
 
